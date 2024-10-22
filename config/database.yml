@@ -13,16 +13,22 @@ development:
   <<: *default
   database: storage/development.sqlite3
 
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 test:
   <<: *default
   database: storage/test.sqlite3
 
 production:
   <<: *default
-  adapter: postgresql
+  adapter: postgrespl
   encoding: unicode
   pool: 5
+
   database: render_703z
   username: render_703z_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
+
+  #database: storage/production.sqlite3
