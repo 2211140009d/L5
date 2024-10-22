@@ -3,7 +3,7 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
-#
+
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -25,10 +25,9 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  
   database: render_703z
   username: render_703z_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
-  
-  #database: storage/production.sqlite3
+
+  # database: storage/production.sqlite3
