@@ -5,9 +5,17 @@
         <%= link_to '削除', "/top/#{e.id}", data: { turbo_method: :delete } %>
         <%= link_to 'いいね', likes_path(tweet_id: e.id), data: { turbo_method: :post } %>
         <%= link_to 'いいね削除', like_path(e), data: { turbo_method: :delete } %>
+<<<<<<< HEAD
         <%= e.like_users.include?(User.find_by(uid: session[:login_uid])) %>
+=======
+        <%= e.like_users.include?(User.find_by(uid: session[:login_uid])) ? 'true' : 'false' %>
+>>>>>>> origin/main
     </p>
 <% end %>
 
 <%= link_to '新規追加', '/top/new' %>
+<<<<<<< HEAD
 <%= link_to 'ログアウト', top_logout_path %>
+=======
+<%= link_to 'ログアウト', top_logout_path %>
+>>>>>>> origin/main
