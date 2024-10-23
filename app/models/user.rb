@@ -1,9 +1,5 @@
 class User < ApplicationRecord
   has_many :tweets
   has_many :likes
-  has_many :like_tweets, through: :likes, source: :tweet
-<<<<<<< HEAD
+  has_many :likes_tweets, through: :likes, source: tweet
 end
-=======
-end
->>>>>>> origin/main
